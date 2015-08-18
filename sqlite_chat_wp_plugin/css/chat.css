@@ -1,0 +1,100 @@
+.sqlite_chat .sqlite_chat_message {
+    margin: 2px 3px 1px 0px;
+    padding: 3px;
+    line-height: 12px;
+    font-size: 11px;
+    word-wrap: break-word;
+    border: 1px solid #dadada;
+    background-color: #FFFFFF;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.sqlite_chat .sqlite_chat_message:hover {
+    border: 1px solid #cccccc;
+}
+.sqlite_chat .clr {
+    clear: both;
+}
+.sqlite_chat .sqlite_chat_message div {
+    margin: 0;
+    padding: 0;
+}
+.sqlite_chat .sqlite_chat_message .info {
+    display: block;
+    margin-top: 2px;
+    color: #969696;
+    background-color: rgb(240, 247, 252);
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.sqlite_chat .sqlite_chat_message .text {
+    font-size: 11px;
+}
+.sqlite_chat .sqlite_chat_message .action {
+    opacity: 0.3;
+    cursor: pointer;
+}
+.sqlite_chat .sqlite_chat_message .action:hover {
+    opacity: 1;
+}
+.sqlite_chat .sqlite_chat_message hr {
+    height: 1px;
+    border: 0 none;
+    border-top: 1px solid #dbe8ed;
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+.sqlite_chat .sqlite_chat_message .avatar img {
+    float: left;
+    margin-right: 1px;
+    padding-right: 4px;
+    height: 27px;
+    width: 27px;
+    background: #fff;
+}
+
+.sqlite_chat_bbcode_bar {
+    background: #fff url("../img/bbcode/bg.png") repeat;
+}
+.sqlite_chat_bbcode_bar span,
+.sqlite_chat_bbcode_bar span img,
+.sqlite_chat_bbcode_bar .bbspacer,
+.sqlite_chat_bbcode_bar .bbselect {
+    float: left;
+}
+.sqlite_chat_bbcode_bar .bbselect {
+    height: 21px;
+    padding: 4px 3px 0 3px;
+}
+.sqlite_chat_bbcode_bar .bbselect select {
+    font-size: 11px;
+}
+.sqlite_chat_bbcode_bar span {
+    cursor: pointer;
+    background: url("../img/bbcode/buttons.png") no-repeat;
+}
+.sqlite_chat_bbcode_bar span:hover {
+    background-position: -23px 0;
+}
+.sqlite_chat_add_block {
+    width: 99% !important;
+    background-color: #f9fafa;
+    border: none;
+}
+
+.ui-corner-all { 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+#sqlite_chat_message {
+    width: 99%;
+    height: 60px;
+    display:block;
+    border:1px solid #c2c2c2;
+}
