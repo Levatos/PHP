@@ -1,0 +1,12 @@
+vk_music_main_page:
+    path:     /
+    defaults: { _controller: VKMusicBundle:Main:index }
+vk_music_search:
+    path:     /search/
+    defaults: { _controller: VKMusicBundle:Main:search }
+vk_music_get_bitrate:
+    path:     /getBitrate/
+    defaults: { _controller: VKMusicBundle:Main:detectBitrate }
+vk_music_download:
+    path:     /download/{data}
+    defaults: { _controller: VKMusicBundle:Main:download }

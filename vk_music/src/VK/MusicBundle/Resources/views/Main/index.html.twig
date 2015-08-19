@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}VK Music{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ app.request.getSchemeAndHttpHost ~ asset('bundles/vk_music/jplayer/skins/premium-pixels/premium-pixels.css') }}" type="text/css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.getSchemeAndHttpHost ~ asset('bundles/vk_music/jplayer/js/jquery.jplayer.min.js') }}"></script>
+        <script type="text/javascript">
+        function find_song(){
+               var query = document.getElementById("query").value;
+
+                jQuery.post("{{ app.request.getSchemeAndHttpHost() }}/search/", {query: query}, function(data){
+
+                    jQuery("div.vk_music_output").html(data);
+                }
+            );
+            }
+
+            function detect_bitrate(song_id, song_url){
+                jQuery.post("{{ app.request.getSchemeAndHttpHost() }}/getBitrate/", {song_url: song_url}, function(data){
+                    jQuery("div#"+song_id).html(data);
+                }
+            );
+            }
+        </script>
+</head>
+
+<div class="vk_music">
+    {% block search_form %}
+        <center>
+            <form action="" method="POST" onsubmit="find_song(); return false;">
+                <label for="query">Please enter a song name:</label><br />
+                <input type="text" id="query" class="flat" style="width: 200px;" /><br />
+
+                <a href="#" class="vk_music_submit" title="Search" onclick="find_song(); return false;">Let's find</a>
+            </form>
+        </center>
+    {% endblock %}
+    
+    <div class="vk_music_output">
+        {% block search_results %}{% endblock %}
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Music parser from VK social network API with file size and bitrate detection, possibility to download and listen music through JS/HTML5 player.
